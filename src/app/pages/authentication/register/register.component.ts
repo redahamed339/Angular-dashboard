@@ -13,9 +13,9 @@ export class RegisterComponent {
   obj={
     firstName: "",
     lastName: "",
-    email: "",
-    userName: "",
-    password: ""
+    email: "", 
+    userName: "", 
+    password: ""  
   }
   constructor(private master:HttpClient, private router:Router){
 
@@ -23,7 +23,7 @@ export class RegisterComponent {
   Register(){
     this.master.post(environment.api+apiconstant.register.register,this.obj).subscribe(res=>{
       this.router.navigateByUrl("/login");
-    })
+    })  
   }
   Login(){
     this.router.navigateByUrl("/login");

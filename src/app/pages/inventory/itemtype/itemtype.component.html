@@ -1,0 +1,24 @@
+
+<table class="table tab-content">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col" class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-right: 66px;">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider" >
+      <tr *ngFor="let item of ItemType">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-success me-md-2" type="button">Edit</button>
+                <button class="btn btn-danger" type="button">Delete</button>
+              </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
